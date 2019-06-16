@@ -6,7 +6,7 @@ template <typename T, size_t buffer_size>
 class ring_buffer {
 public:
     using iterator = T*;
-    using const_iterator = const T const*;
+    using const_iterator = const T*;
 
     ring_buffer() {
         _ptr = new T[buffer_size];
@@ -36,11 +36,11 @@ public:
     ring_buffer& operator=(ring_buffer&&) = default;
     ring_buffer& operator=(ring_buffer const&) = default;
 
-    iterator begin() noexcept {
+    iterator begin() const noexcept {
         return _ptr;
     }
 
-    iterator end() noexcept {
+    iterator end() const noexcept {
         return _ptr + buffer_size;
     }
 
