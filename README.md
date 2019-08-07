@@ -4,7 +4,7 @@ A lightweight, basic C++ Ring Buffer
 ### Initially wrote this as a POC, however if this comes in useful to you, feel free to enjoy it :) ###
 
 ```cpp
-RingBuffer<char, 500> r_buf{};
+ring_buffer<char, 500> r_buf{};
 for (int i = 0; i < 500; i++) {
     r_buf.write('a');
 }
