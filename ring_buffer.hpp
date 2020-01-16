@@ -18,6 +18,7 @@ public:
     }
 
     ring_buffer(ring_buffer&& buff) noexcept {
+        delete[] _ptr;
         _ptr = buff._ptr;
         buff._ptr = nullptr;
         _write_ptr = buff._write_ptr;
