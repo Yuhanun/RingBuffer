@@ -37,11 +37,11 @@ public:
     ring_buffer& operator=(ring_buffer&&) = default;
     ring_buffer& operator=(ring_buffer const&) = default;
 
-    iterator begin() const noexcept {
+    iterator begin() noexcept {
         return _ptr;
     }
 
-    iterator end() const noexcept {
+    iterator end() noexcept {
         return _ptr + buffer_size;
     }
 
